@@ -1,6 +1,8 @@
 {
   "permissions": {
     "allow": [
+      "Edit(//Users/gazza/devel/**)",
+      "Write(//Users/gazza/devel/**)",
       "mcp__pycharm__create_new_file",
       "mcp__pycharm__execute_run_configuration",
       "mcp__pycharm__find_files_by_glob",
