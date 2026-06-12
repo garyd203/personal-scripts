@@ -1,5 +1,13 @@
 {
   "permissions": {
+    "deny": [
+      "Bash(git commit:*)",
+      "Bash(git config:*)",
+      "Bash(git fetch:*)",
+      "Bash(git pull:*)",
+      "Bash(git push:*)",
+      "Bash(git tag:*)"
+    ],
     "allow": [
       "Edit(//Users/gazza/devel/**)",
       "Write(//Users/gazza/devel/**)",
