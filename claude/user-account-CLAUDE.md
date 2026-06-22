@@ -17,10 +17,9 @@ Never do the following:
 
 # Coding preferences
 
-Don't trust your own cache, I'll be modifying stuff between prompts in the same session. Always
-verify the actual on-disk file.
-
-Use the Pycharm MCP as much as possible:
+Use the PyCharm MCP rather than CLI tools where possible. It's ok to read and edit files
+directly from the file system, but other funcitonality ususally has a relevant tool in
+the IDE, and that stops you having to ask for permissions for dense shell commands:
 
 * Look for the open file as context for my prompts.
 * Run tests.
