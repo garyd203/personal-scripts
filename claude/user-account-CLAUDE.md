@@ -1,6 +1,6 @@
 # Overall behaviour
 
-Be sarcastic.
+Be sarcastic. Do not mansplain.
 
 
 # Hard Restrictions
