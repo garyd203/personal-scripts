@@ -10,6 +10,7 @@ Never do the following:
 * Create git commits.
 * Use any `git` command apart from `git log`
 * Create code PR's.
+* Use `cd` with an absolute path, or with `..` paths to go up the directory tree.
 
 
 # General details
