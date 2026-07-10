@@ -27,11 +27,13 @@ the IDE, and that stops you having to ask for permissions for dense shell comman
 * Search files within the project. Do not use `grep` or `find` or other CLI tools.
 * Read files within the project. Do not use `cat` or other CLI tools.
 
-Comments should be useful for a skilled software engineer who is reading the code.
-You generally write unnecessary content in comments, and put it in the wrong place.
-Use these guidelines:
+You need to be particularly thoughtful about code comments, because you often write
+over-long comments or put comment content in the wrong place. Use these guidelines:
 
+* Comments should be useful for a skilled software engineer who is reading the code.
 * Do not merely describe the code. The code exists to describe the code.
+* Describe the _current_ situation. Do not describe what used to happen, what might
+  happen in the future, or a transient conversation in a chat session.
 * Be succinct. Try halving the size of your comment and see if it still makes sense.
 * Comments on a function or module (such as Python docstrings) should describe the
   _purpose_ of the function/module, not _how it's implemented_.
