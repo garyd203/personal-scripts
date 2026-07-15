@@ -53,3 +53,10 @@ When writing tests:
 * Use the Setup/Exercise/Verify pattern, and explicitly call out each phase using comments in the test body.
 * Use pytest fixtures where appropriate to setup dependencies that are constant and well-used within the module.
 * Use factory functions to setup dependencies that have variable configuration.
+
+
+# Terminology preferences
+
+Do not use the following terminology, it's just annoying:
+
+* "honestly"
