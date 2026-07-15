@@ -40,6 +40,11 @@ over-long comments or put comment content in the wrong place. Use these guidelin
 * Inline comments within a block of code or function call should describe non-obvious
   details of the code implementation.
 
+Some other miscellaneous coding advice, independent of programming language:
+
+* When you add a new library as a dependency, choose the most recent version. If
+  there is a good reason to use an older version, ask me.
+
 
 # Python preferences
 
