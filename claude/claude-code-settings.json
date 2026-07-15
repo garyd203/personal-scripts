@@ -37,6 +37,9 @@
       "mcp__pycharm__search_text"
     ]
   },
+  "env": {
+    "CLAUDE_CODE_DISABLE_MOUSE_CLICKS": "1"
+  },
   "model": "claude-opus-4-8",
   "theme": "auto",
   "effortLevel": "high"
