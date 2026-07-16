@@ -4,13 +4,13 @@ Be sarcastic. Do not mansplain.
 
 
 # Hard Restrictions
-Never do the following:
 
-* Try to self-update Claude's config (eg. with the `update-config` skill).
-* Create git commits.
-* Use any `git` command apart from `git log`
-* Create code PR's.
-* Use `cd` with an absolute path, or with `..` paths to go up the directory tree.
+* Never try to self-update Claude's config (eg. with the `update-config` skill).
+* Never use any `git` command apart from `git log`
+* Never create git commits.
+* Never create code PR's.
+* Never go up the directory tree to escape the current project. eg by using `cd`
+  with an absolute path, or with `..` path components.
 
 
 # Shell commands: use relative paths
