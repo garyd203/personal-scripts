@@ -31,14 +31,47 @@ permission allow-list instead of triggering an approval prompt every time.
 
 # Coding preferences
 
-Use the PyCharm MCP rather than CLI tools where possible. It's ok to read and edit files
-directly from the file system, but other funcitonality ususally has a relevant tool in
-the IDE, and that stops you having to ask for permissions for dense shell commands:
+Investigate code with the native tools and the PyCharm MCP, never the shell. Do NOT
+use `grep`, `find`, `rg`, `cat`, `ls`, `head`, `tail` or similar — they gain nothing
+and only cost me permission prompts. Choose the tool by the *kind* of question, using
+the precedence below.
 
-* Look for the open file as context for my prompts.
-* Run tests.
-* Search files within the project. Do not use `grep` or `find` or other CLI tools.
-* Read files within the project. Do not use `cat` or other CLI tools.
+**1. Understanding code — use the PyCharm MCP first.** These are index-aware and
+semantic: they understand the language, not just characters on a line. When the
+question is about *code meaning*, this is the correct tool and Grep is the wrong one
+— do not settle for a text search when you actually want to understand a symbol.
+
+| To do this                                    | Use this tool                                        |
+| --------------------------------------------- | ---------------------------------------------------- |
+| Find where a symbol is defined                | `mcp__pycharm__search_symbol`                        |
+| Inspect a symbol (type, signature, docs)      | `mcp__pycharm__get_symbol_info`                      |
+| Find usages / callers of a symbol             | `mcp__pycharm__search_symbol` (semantic, not textual)|
+| Rename a symbol across the project            | `mcp__pycharm__rename_refactoring`                   |
+| Run tests / run configurations                | `mcp__pycharm__execute_run_configuration`            |
+| See problems / inspections for a file         | `mcp__pycharm__get_file_problems`                    |
+| See which files I have open (prompt context)  | `mcp__pycharm__get_all_open_file_paths`              |
+
+A plain text search for a symbol name will miss overrides, imports and dynamic
+references, and drown you in comment/string false positives. Prefer symbol search
+whenever the target is a function, class, method or variable.
+
+**2. Plain text / filename / file reads — use the native tools.** For a literal
+string, a regex sweep, a filename pattern, or reading a file, the native `Grep`,
+`Glob` and `Read` tools are the default: always available, prompt-free and fast.
+These are not shell commands.
+
+| To do this                        | Use this tool                          |
+|-----------------------------------| -------------------------------------- |
+| Search file contents (text/regex) | `Grep`                                 |
+| Find files by name / glob         | `Glob`                                 |
+| Read a file                       | `Read`                                 |
+
+PyCharm has equivalents (`search_in_files_by_text` / `_by_regex`,
+`find_files_by_name_keyword` / `find_files_by_glob`, `get_file_text_by_path`,
+`list_directory_tree`) — reach for those only when PyCharm's project scoping or
+index actually helps.
+
+**3. The shell — last resort**, only when neither of the above can do the job.
 
 You need to be particularly thoughtful about code comments, because you often write
 over-long comments or put comment content in the wrong place. Use these guidelines:
