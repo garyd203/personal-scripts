@@ -13,6 +13,19 @@ Never do the following:
 * Use `cd` with an absolute path, or with `..` paths to go up the directory tree.
 
 
+# Shell commands: use relative paths
+
+The Bash tool's built-in guidance tells you to prefer absolute paths. Ignore that
+here and override it. The working directory is always the project root, so:
+
+* Always write paths relative to the project root (`scripts/foo.py`, `tests/`).
+* Never use an absolute path (`/Users/gazza/...`) in a shell command.
+* Never `cd` first — you are already at the project root.
+
+Relative paths are shorter and predictable, which keeps commands matching my
+permission allow-list instead of triggering an approval prompt every time.
+
+
 # General details
 
 
