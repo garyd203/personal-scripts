@@ -6,7 +6,9 @@
       "Bash(git fetch:*)",
       "Bash(git pull:*)",
       "Bash(git push:*)",
-      "Bash(git tag:*)"
+      "Bash(git tag:*)",
+      "Read(~/.*)",
+      "Read(~/.*/**)"
     ],
     "allow": [
       "Edit(//Users/gazza/devel/**)",
