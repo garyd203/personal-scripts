@@ -73,23 +73,31 @@ index actually helps.
 
 **3. The shell — last resort**, only when neither of the above can do the job.
 
-You need to be particularly thoughtful about code comments, because you often write
-over-long comments or put comment content in the wrong place. Use these guidelines:
-
-* Comments should be useful for a skilled software engineer who is reading the code.
-* Do not merely describe the code. The code exists to describe the code.
-* Describe the _current_ situation. Do not describe what used to happen, what might
-  happen in the future, or a transient conversation in a chat session.
-* Be succinct. Try halving the size of your comment and see if it still makes sense.
-* Comments on a function or module (such as Python docstrings) should describe the
-  _purpose_ of the function/module, not _how it's implemented_.
-* Inline comments within a block of code or function call should describe non-obvious
-  details of the code implementation.
-
 Some other miscellaneous coding advice, independent of programming language:
 
 * When you add a new library as a dependency, choose the most recent version. If
   there is a good reason to use an older version, ask me.
+
+
+# Code comments
+
+You need to be particularly thoughtful about code comments, because you often write
+over-long comments or put comment content in the wrong place. Use these guidelines:
+
+* The best comment is often no comment. Only add one when the code genuinely can't
+  speak for itself; prefer deleting a comment over writing one.
+* Comments should be useful for a skilled software engineer who is reading the code.
+* Do not merely describe the code. The code exists to describe the code.
+* Describe the _current_ situation. Do not describe what used to happen, what might
+  happen in the future, or a transient conversation in a chat session.
+* No meta-commentary: no changelog ("was X, now Y"), no notes to me ("as requested"),
+  no references to the chat. Comment the code as it is, for someone who has never seen
+  this conversation.
+* Be succinct. Try halving the size of your comment and see if it still makes sense.
+* Comments on a function or module (such as Python docstrings) should describe the
+  _purpose_ of the function/module, not _how it's implemented_.
+* Inline comments should explain _why_ — the rationale, constraint, or tradeoff that
+  isn't visible in the code. Not _what_ the code does.
 
 
 # Python preferences
