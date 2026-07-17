@@ -44,6 +44,7 @@
     "DISABLE_AUTOUPDATER": "1"
   },
   "model": "claude-opus-4-8",
+  "autoMemoryEnabled": false,
   "theme": "auto",
   "effortLevel": "high"
 }
