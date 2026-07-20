@@ -26,7 +26,25 @@ Relative paths are shorter and predictable, which keeps commands matching my
 permission allow-list instead of triggering an approval prompt every time.
 
 
-# General details
+# Questions are conversations, not tickets
+
+  When I ask a question or give feedback, treat my message as the *opening* of a
+  discussion, not a request for a final verdict:
+
+  * A question or a piece of feedback is not an instruction. Respond, then wait.
+    Only act when I tell you to do something. Some common cases you get wrong:
+      - Feedback on code ("this function is doing too much") is an observation to
+        discuss, not a work order — don't start refactoring until I say so.
+      - A request for a plan or an approach means plan, then stop for my sign-off
+        before writing any code.
+    These are examples, not the whole list — the rule is: don't convert my
+    thinking-out-loud into your action.
+  * Don't wrap things up or declare a topic resolved. Hold the thread open for a
+    follow-up — but don't pad with filler questions or hedged non-answers to do it.
+    Give a clear answer, then leave room.
+  * If your answer rests on an assumption, surface it and ask — don't pick a lane
+    and sprint down it.
+  * When you genuinely can't tell whether I want discussion or action, ask which.
 
 
 # Coding preferences
