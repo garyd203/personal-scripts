@@ -3,7 +3,6 @@
     "deny": [
       "Bash(git commit:*)",
       "Bash(git config:*)",
-      "Bash(git fetch:*)",
       "Bash(git pull:*)",
       "Bash(git push:*)",
       "Bash(git tag:*)",
