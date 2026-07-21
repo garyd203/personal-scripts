@@ -6,8 +6,17 @@
       "Bash(git pull:*)",
       "Bash(git push:*)",
       "Bash(git tag:*)",
-      "Read(~/.*)",
-      "Read(~/.*/**)"
+      "Read(~/.aws/**)",
+      "Read(~/.claude/.credentials.json)",
+      "Read(~/.docker/**)",
+      "Read(~/.gnupg/**)",
+      "Read(~/.ssh/**)"
+    ],
+    "ask": [
+      "Edit(~/.claude/CLAUDE.md)",
+      "Edit(~/.claude/settings.json)",
+      "Write(~/.claude/CLAUDE.md)",
+      "Write(~/.claude/settings.json)"
     ],
     "allow": [
       "Edit(//Users/gazza/devel/**)",
