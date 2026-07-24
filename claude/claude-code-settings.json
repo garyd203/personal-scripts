@@ -51,7 +51,7 @@
     "CLAUDE_CODE_DISABLE_MOUSE_CLICKS": "1",
     "DISABLE_AUTOUPDATER": "1"
   },
-  "model": "claude-opus-4-8",
+  "model": "claude-fable-5",
   "autoMemoryEnabled": false,
   "theme": "auto",
   "effortLevel": "high"
