@@ -52,7 +52,7 @@
     "DISABLE_AUTOUPDATER": "1"
   },
   "model": "claude-fable-5",
+  "effortLevel": "high",
   "autoMemoryEnabled": false,
-  "theme": "auto",
-  "effortLevel": "high"
+  "theme": "auto"
 }
