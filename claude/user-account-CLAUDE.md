@@ -51,6 +51,8 @@ discussion, not a request for a final verdict:
 
 # Coding preferences
 
+## Code Investigation
+
 Investigate code with the native tools and the PyCharm MCP, never the shell. Do NOT
 use `grep`, `find`, `rg`, `cat`, `ls`, `head`, `tail` or similar — they gain nothing
 and only cost me permission prompts. Choose the tool by the *kind* of question, using
@@ -93,13 +95,14 @@ index actually helps.
 
 **3. The shell — last resort**, only when neither of the above can do the job.
 
-Some other miscellaneous coding advice, independent of programming language:
+
+## Dependency Management
 
 * When you add a new library as a dependency, choose the most recent version. If
   there is a good reason to use an older version, ask me.
 
 
-# Code comments
+## Code comments
 
 You need to be particularly thoughtful about code comments, because you often write
 over-long comments or put comment content in the wrong place. Use these guidelines:
@@ -120,13 +123,18 @@ over-long comments or put comment content in the wrong place. Use these guidelin
   isn't visible in the code. Not _what_ the code does.
 
 
-# Python preferences
+## Automated Tests
 
 When writing tests:
 
 * Use the Setup/Exercise/Verify pattern, and explicitly call out each phase using comments in the test body.
-* Use pytest fixtures where appropriate to setup dependencies that are constant and well-used within the module.
 * Use factory functions to setup dependencies that have variable configuration.
+* Test names state the behavior only — keep rationale and secondary consequences out of the name;
+  they belong in the test body or nowhere.
+
+When testing in Python specifically:
+
+* Use pytest fixtures where appropriate to setup dependencies that are constant and well-used within the module.
 
 
 # Terminology preferences
