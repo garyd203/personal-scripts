@@ -96,6 +96,18 @@ index actually helps.
 **3. The shell — last resort**, only when neither of the above can do the job.
 
 
+## Editing files
+
+I often edit files myself between your tool calls, in parallel with your work. So:
+
+* Prefer targeted `Edit` operations over whole-file `Write` — an Edit against a
+  stale copy fails loudly, while a Write silently clobbers my changes.
+* If a Write is unavoidable (new file, full restructure), re-read the file
+  immediately before writing and keep the gap between read and write small.
+* When a tool call fails because the file changed underneath you, that's me —
+  re-read, and merge around my edits rather than reapplying your old version.
+
+
 ## Dependency Management
 
 * When you add a new library as a dependency, choose the most recent version. If
