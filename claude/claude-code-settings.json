@@ -22,6 +22,10 @@
       "Write(~/.claude/settings.json)"
     ],
     "allow": [
+      "Bash(black :*)",
+      "Bash(pyrefly :*)",
+      "Bash(pytest :*)",
+      "Bash(ruff check :*)",
       "Edit(//Users/gazza/devel/**)",
       "Write(//Users/gazza/devel/**)",
       "mcp__claude_ai_Sentry__find_organizations",
