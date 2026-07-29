@@ -28,6 +28,19 @@ Relative paths are shorter and predictable, which keeps commands matching my
 permission allow-list instead of triggering an approval prompt every time.
 
 
+# Python commands: run directly, not via `uv run`
+    
+Assume the shell is already inside an activated venv. So:
+    
+* Run `python`, `pytest`, `alembic` etc. directly — never wrap them in
+  `uv run` (or `uv run --no-sync`).
+* This does not apply to hook definitions or other project config that
+  explicitly uses `uv run` — leave those as they are.
+  
+Direct commands are shorter, match my permission allow-list, and run in
+the same venv I'm using, so we both see identical behaviour.
+
+
 # Questions are conversations, not tickets
 
 When I ask a question or give feedback, treat my message as the *opening* of a
