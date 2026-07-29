@@ -26,6 +26,7 @@
       "Bash(pyrefly :*)",
       "Bash(pytest :*)",
       "Bash(ruff check :*)",
+      "Bash(tail :*)",
       "Edit(//Users/gazza/devel/**)",
       "Write(//Users/gazza/devel/**)",
       "mcp__claude_ai_Sentry__find_organizations",
