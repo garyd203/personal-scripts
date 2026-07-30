@@ -8,7 +8,7 @@ dumping a big up-front plan or batching many changes at once.
 # Hard Restrictions
 
 * Never try to self-update Claude's config (eg. with the `update-config` skill).
-* Never use any `git` command apart from `git log`
+* Never use any `git` command apart from `git log` or `git diff`
 * Never create git commits.
 * Never create code PR's.
 * Never go up the directory tree to escape the current project. eg by using `cd`

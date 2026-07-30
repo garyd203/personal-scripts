@@ -23,6 +23,7 @@
     ],
     "allow": [
       "Bash(black :*)",
+      "Bash(git diff:*)",
       "Bash(grep :*)",
       "Bash(pyrefly :*)",
       "Bash(pytest :*)",
