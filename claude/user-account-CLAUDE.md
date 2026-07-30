@@ -104,7 +104,7 @@ These are not shell commands.
 PyCharm has equivalents (`search_in_files_by_text` / `_by_regex`,
 `find_files_by_name_keyword` / `find_files_by_glob`, `get_file_text_by_path`,
 `list_directory_tree`) — reach for those only when PyCharm's project scoping or
-index actually helps.
+index actually helps, or the native tools are unavailable.
 
 **3. The shell — last resort**, only when neither of the above can do the job.
 
