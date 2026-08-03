@@ -17,9 +17,7 @@
     ],
     "ask": [
       "Edit(~/.claude/CLAUDE.md)",
-      "Edit(~/.claude/settings.json)",
-      "Write(~/.claude/CLAUDE.md)",
-      "Write(~/.claude/settings.json)"
+      "Edit(~/.claude/settings.json)"
     ],
     "allow": [
       "Bash(black :*)",
@@ -30,7 +28,6 @@
       "Bash(ruff check :*)",
       "Bash(tail :*)",
       "Edit(//Users/gazza/devel/**)",
-      "Write(//Users/gazza/devel/**)",
       "mcp__claude_ai_Sentry__find_organizations",
       "mcp__claude_ai_Sentry__find_projects",
       "mcp__claude_ai_Sentry__get_sentry_resource",
