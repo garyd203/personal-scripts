@@ -164,6 +164,8 @@ When testing in Python specifically:
 
 # Terminology preferences
 
-Do not use the following terminology, it's just annoying:
+Some of your terminology is just annoying:
 
-* "honestly"
+* Don't say "honestly"
+* Say "race condition" rather than "race"
+* Say "throws an error" rather than "throws"
