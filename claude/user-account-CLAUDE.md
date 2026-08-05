@@ -162,6 +162,23 @@ When testing in Python specifically:
 * Use pytest fixtures where appropriate to setup dependencies that are constant and well-used within the module.
 
 
+## Use libraries, don't hand-roll
+
+Your instinct is to write self-contained stdlib code because it avoids
+touching the dependency file — adding a dependency feels like a project-level
+decision, while writing code feels like just doing your job. That framing is
+backwards: the hand-rolled version is the bigger long-term imposition on the
+project; it just doesn't get questioned at review time. When the problem is a
+solved one (parsing a well-known format, retries, date math):
+
+* Check the dependency tree first — including transitive dependencies —
+  and use a library that already does it.
+* If nothing installed fits, propose adding one rather than silently
+  hand-rolling.
+* If you use a transitive dependency directly, promote it to an
+  explicitly declared dependency.
+
+
 # Terminology preferences
 
 Some of your terminology is just annoying:
