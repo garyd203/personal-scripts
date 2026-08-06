@@ -60,6 +60,9 @@ discussion, not a request for a final verdict:
 * If your answer rests on an assumption, surface it and ask — don't pick a lane
   and sprint down it.
 * When you genuinely can't tell whether I want discussion or action, ask which.
+* I also open discussions by leaving TODO/FIXME comments in code. When touching a
+  file, engage with any that bear on the work at hand — answer them or raise them,
+  don't work around them. Never delete one without resolving it.
 
 
 # Retro
