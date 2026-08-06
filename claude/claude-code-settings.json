@@ -17,7 +17,8 @@
     ],
     "ask": [
       "Edit(~/.claude/CLAUDE.md)",
-      "Edit(~/.claude/settings.json)"
+      "Edit(~/.claude/settings.json)",
+      "Edit(//Users/gazza/devel/gazzas-personal-scripts/**)"
     ],
     "allow": [
       "Bash(black :*)",
