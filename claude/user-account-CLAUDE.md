@@ -62,7 +62,28 @@ discussion, not a request for a final verdict:
 * When you genuinely can't tell whether I want discussion or action, ask which.
 
 
+# Retro
+
+When a piece of work wraps up and there's nothing more useful to queue, offer to run `/retro`
+— offer, don't run it unprompted.
+
+
 # Coding preferences
+
+## What code is for
+
+Code serves two masters equally: the machine that executes it, and the humans who must read,
+understand and modify it. Correctness for the machine is non-negotiable — but so is clarity
+for the next reader, who has to comprehend every line before they can safely change it.
+
+This means no AI slop. Concretely:
+
+- Don't add code, abstractions or config "just in case" — build only what's needed now.
+- No boilerplate that restates the obvious: redundant comments, defensive checks for things
+  that can't happen, wrapper layers that only pass through.
+- Don't pad with ceremony — needless try/except, speculative options, dead parameters.
+- If you can't say why a line earns its place, delete it.
+
 
 ## Code Investigation
 
@@ -125,6 +146,11 @@ I often edit files myself between your tool calls, in parallel with your work. S
 
 * When you add a new library as a dependency, choose the most recent version. If
   there is a good reason to use an older version, ask me.
+* Pin with a tilde (`~=`) dropping the patch component — `foo~=2.14` — so minor and patch
+  updates are allowed but the major is held. For 0.x libraries the breaking boundary is the
+  minor, not the major, so keep the patch component — `foo~=0.51.0` — to allow patches only.
+  Deviate only with a stated reason in a comment (e.g. CalVer packages, where semver-style
+  bounds are meaningless).
 
 
 ## Code comments
@@ -153,13 +179,58 @@ over-long comments or put comment content in the wrong place. Use these guidelin
 When writing tests:
 
 * Use the Setup/Exercise/Verify pattern, and explicitly call out each phase using comments in the test body.
-* Use factory functions to setup dependencies that have variable configuration.
+* Use factory functions to setup dependencies that have variable configuration. Factories
+  default every argument, so a test overrides only what it cares about.
 * Test names state the behavior only — keep rationale and secondary consequences out of the name;
   they belong in the test body or nowhere.
+* Real dependencies (e.g. Postgres), fakes where available (e.g. `moto`), mocks at the edges.
+* Test *our* behaviour, not the library's. A test earns its place by asserting something we
+  chose — a default, a config prefix, a route's contract — not by re-verifying framework
+  passthrough.
 
 When testing in Python specifically:
 
 * Use pytest fixtures where appropriate to setup dependencies that are constant and well-used within the module.
+* API-layer tests are always async.
+* Annotate fixture return types — a fixture is an interface, so its return type is a declared
+  contract (yield fixtures included, e.g. `AsyncIterator[AsyncClient]`). Don't annotate test
+  parameters; that's noise a capable type-checker/IDE infers.
+
+
+## Typing (Python)
+
+Two different things wear the word "type" in Python, and we treat them differently:
+
+* **Type hints** are documentation for humans — they exist to make the code easier to
+  understand. Like any documentation, they're optional and belong wherever they aid the
+  reader, not everywhere as ceremony. A signature may be fully, partly, or not typed (some
+  params typed, no return type — common in tests).
+* **Type checking** is static analysis for the machine — a limited but real correctness
+  check, driven by hints *and* inference. It works whether or not the code is annotated, so
+  we lean on it deliberately: unannotated code is still checked, not skipped.
+
+That's the two masters from "What code is for" applied to types. Beyond it:
+
+* Use inference or a precise type rather than `Any` — `Any` blinds the checker.
+* Don't contort code to satisfy the checker. Awkward types are often just the type system
+  being awkward — a big reason we don't chase 100% typing. When a hint comes out opaque or
+  dense, drop it and let inference cover it rather than writing a baroque generic.
+
+
+## When a check won't pass
+
+The absolute checks (linter, formatter, type-checker — whatever the project's quality gate
+runs) must genuinely pass — don't silence them. A `# noqa`, `# type: ignore` or `# fmt: skip`
+forces a green that hides the problem, which is the opposite of why they're absolute. If you
+can't get them clean, you're not done: hand back to me, say what's blocking, and let me make
+the call.
+
+Tests are the one escapable check — you may hand back with failures (a draft, deliberate WIP),
+but only after trying to fix them, and only announced: what failed and why.
+
+Either way, never end a turn having quietly papered over a check.
+
+No fix attempted, no reason, or no flag → no hatch.
 
 
 ## Use libraries, don't hand-roll
