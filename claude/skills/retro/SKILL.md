@@ -1,4 +1,5 @@
 ---
+name: retro
 description: Distil this session's corrections into durable config, conventions or memory.
 ---
 
@@ -25,7 +26,7 @@ most enforceable option — a check beats prose.
 | Enforceable rule (lint, format, permission, hook behaviour) | tool config: `settings.json` or a `.claude/hooks/` script |
 | Judgment call specific to *this* project | a convention in the project `CLAUDE.md` |
 | How the user wants you to work across *all* projects (style, interaction, tool prefs) | the user's global `~/.claude/CLAUDE.md` |
-| A repeated multi-step task worth a shortcut | a new `.claude/commands/` command or `.claude/agents/` subagent |
+| A repeated multi-step task worth a shortcut | a new `.claude/skills/` skill or `.claude/agents/` subagent |
 | A fact about who the user is, or a pointer to a resource | a memory file (see the memory section of the system prompt) |
 
 ## Write
