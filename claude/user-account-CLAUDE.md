@@ -172,6 +172,8 @@ over-long comments or put comment content in the wrong place. Use these guidelin
   _purpose_ of the function/module, not _how it's implemented_.
 * Inline comments should explain _why_ — the rationale, constraint, or tradeoff that
   isn't visible in the code. Not _what_ the code does.
+* Module-level constants and type aliases get `#:` doc-comments attached to each
+  item — never one floating block comment over a group.
 
 
 ## Automated Tests
