@@ -250,6 +250,14 @@ solved one (parsing a well-known format, retries, date math):
   explicitly declared dependency.
 
 
+# Reviewing generated code
+
+After each significant batch of generated code, run the `no-slop-reviewer` subagent on the
+working-tree diff before handing back — don't wait to be asked. Not a hook: a `Stop` hook would
+fire every turn (including doc/config-only ones), and "significant batch" is a judgment call a
+tool can't make.
+
+
 # Terminology preferences
 
 Some of your terminology is just annoying:
