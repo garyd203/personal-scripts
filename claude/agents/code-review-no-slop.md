@@ -19,7 +19,8 @@ Flag, with `file:line` and a one-line why:
 
 - Code, abstraction or config added "just in case" — not needed by anything now.
 - Boilerplate that restates the obvious: comments describing *what* the code does,
-  defensive checks for things that can't happen, pass-through wrappers.
+  defensive checks for things that can't happen, pass-through wrappers, local
+  variables that are read-only copies of object attributes.
 - Ceremony: needless try/except, speculative options, dead params, unused typing.
 - Comments that describe history, the chat, or the future rather than the code as it
   is (CLAUDE.md → "Code comments").
