@@ -192,6 +192,8 @@ over-long comments or put comment content in the wrong place. Use these guidelin
   isn't visible in the code. Not _what_ the code does.
 * Module-level constants and type aliases get `#:` doc-comments attached to each
   item — never one floating block comment over a group.
+* Implementation rationale never goes in a function docstring — put it as an inline
+  comment on the line it justifies
 
 
 ## Automated Tests
