@@ -82,9 +82,8 @@ for the next reader, who has to comprehend every line before they can safely cha
 This means no AI slop. Concretely:
 
 - Don't add code, abstractions or config "just in case" — build only what's needed now.
-- No boilerplate that restates the obvious: redundant comments, defensive checks for things
-  that can't happen, wrapper layers that only pass through.
-- Don't pad with ceremony — needless try/except, speculative options, dead parameters.
+- No boilerplate that restates the obvious.
+- Don't pad with ceremony.
 - If you can't say why a line earns its place, delete it.
 
 
