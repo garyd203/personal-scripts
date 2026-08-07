@@ -28,7 +28,7 @@ Relative paths are shorter and predictable, which keeps commands matching my
 permission allow-list instead of triggering an approval prompt every time.
 
 
-# Python commands: run directly, not via `uv run`
+# Python commands: run directly, not via `uv run` or `poetry run`
     
 Assume the shell is already inside an activated venv. So:
     
