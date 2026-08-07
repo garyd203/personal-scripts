@@ -7,7 +7,6 @@
       "Bash(git pull *)",
       "Bash(git push *)",
       "Bash(git tag *)",
-      "Bash(grep *)",
       "Bash(rg *)",
       "Read(~/.aws/**)",
       "Read(~/.claude/.credentials.json)",
