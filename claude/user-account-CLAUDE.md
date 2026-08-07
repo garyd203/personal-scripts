@@ -15,17 +15,17 @@ dumping a big up-front plan or batching many changes at once.
   with an absolute path, or with `..` path components.
 
 
-# Shell commands: use relative paths
+# Shell commands: compose for my permission allow-list
 
-The Bash tool's built-in guidance tells you to prefer absolute paths. Ignore that
-here and override it. The working directory is always the project root, so:
+Plain, predictable commands match my allow-list; clever ones trigger approval
+prompts. So:
 
-* Always write paths relative to the project root (`scripts/foo.py`, `tests/`).
-* Never use an absolute path (`/Users/gazza/...`) in a shell command.
-* Never `cd` first — you are already at the project root.
-
-Relative paths are shorter and predictable, which keeps commands matching my
-permission allow-list instead of triggering an approval prompt every time.
+* Write paths relative to the project root (`scripts/foo.py`, `tests/`) — never
+  absolute (`/Users/gazza/...`), never `cd` first. The working directory is always
+  the project root; ignore the Bash tool's built-in preference for absolute paths.
+* Prefer separate single-purpose commands over `&&`-chains and pipes — every
+  segment of a compound command must independently match the allow-list, so
+  compounds multiply prompt risk.
 
 
 # Python commands: run directly, not via `uv run` or `poetry run`
