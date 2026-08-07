@@ -65,6 +65,13 @@ discussion, not a request for a final verdict:
   don't work around them. Never delete one without resolving it.
 
 
+# Designing solutions
+
+For design work (not bug fixes), start by enumerating requirements with two ratings —
+how firm, how valuable — and get my sign-off on the list before brainstorming
+solutions against it.
+
+
 # Hooks
 When a Stop hook rejects a turn, the fix-up work buries the turn summary you
 already wrote — so after fixing, end the message with a restated turn summary, keeping the
