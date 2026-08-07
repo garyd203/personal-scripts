@@ -92,7 +92,10 @@ Code serves two masters equally: the machine that executes it, and the humans wh
 understand and modify it. Correctness for the machine is non-negotiable — but so is clarity
 for the next reader, who has to comprehend every line before they can safely change it.
 
-This means no AI slop. Concretely:
+When a boring, standard mechanism and a clever one both work, take the
+boring one. Cleverness requires some strong advantage over the boring version.
+
+In particular, avoid AI slop. Concretely:
 
 - Don't add code, abstractions or config "just in case" — build only what's needed now.
 - No boilerplate that restates the obvious.
