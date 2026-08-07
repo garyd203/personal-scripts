@@ -65,6 +65,12 @@ discussion, not a request for a final verdict:
   don't work around them. Never delete one without resolving it.
 
 
+# Hooks
+When a Stop hook rejects a turn, the fix-up work buries the turn summary you
+already wrote — so after fixing, end the message with a restated turn summary, keeping the
+recap the last thing on screen.
+
+
 # Retro
 
 When a piece of work wraps up and there's nothing more useful to queue, offer to run `/retro`
