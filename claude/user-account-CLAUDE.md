@@ -141,15 +141,15 @@ semantic: they understand the language, not just characters on a line. When the
 question is about *code meaning*, this is the correct tool and Grep is the wrong one
 — do not settle for a text search when you actually want to understand a symbol.
 
-| To do this                                    | Use this tool                                        |
-| --------------------------------------------- | ---------------------------------------------------- |
-| Find where a symbol is defined                | `mcp__pycharm__search_symbol`                        |
-| Inspect a symbol (type, signature, docs)      | `mcp__pycharm__get_symbol_info`                      |
-| Find usages / callers of a symbol             | `mcp__pycharm__search_symbol` (semantic, not textual)|
-| Rename a symbol across the project            | `mcp__pycharm__rename_refactoring`                   |
-| Run tests / run configurations                | `mcp__pycharm__execute_run_configuration`            |
-| See problems / inspections for a file         | `mcp__pycharm__get_file_problems`                    |
-| See which files I have open (prompt context)  | `mcp__pycharm__get_all_open_file_paths`              |
+| To do this                                   | Use this tool                                         |
+|----------------------------------------------|-------------------------------------------------------|
+| Find where a symbol is defined               | `mcp__pycharm__search_symbol`                         |
+| Inspect a symbol (type, signature, docs)     | `mcp__pycharm__get_symbol_info`                       |
+| Find usages / callers of a symbol            | `mcp__pycharm__search_symbol` (semantic, not textual) |
+| Rename a symbol across the project           | `mcp__pycharm__rename_refactoring`                    |
+| Run tests / run configurations               | `mcp__pycharm__execute_run_configuration`             |
+| See problems / inspections for a file        | `mcp__pycharm__get_file_problems`                     |
+| See which files I have open (prompt context) | `mcp__pycharm__get_all_open_file_paths`               |
 
 A plain text search for a symbol name will miss overrides, imports and dynamic
 references, and drown you in comment/string false positives. Prefer symbol search
@@ -160,11 +160,11 @@ string, a regex sweep, a filename pattern, or reading a file, the native `Grep`,
 `Glob` and `Read` tools are the default: always available, prompt-free and fast.
 These are not shell commands.
 
-| To do this                        | Use this tool                          |
-|-----------------------------------| -------------------------------------- |
-| Search file contents (text/regex) | `Grep`                                 |
-| Find files by name / glob         | `Glob`                                 |
-| Read a file                       | `Read`                                 |
+| To do this                        | Use this tool |
+|-----------------------------------|---------------|
+| Search file contents (text/regex) | `Grep`        |
+| Find files by name / glob         | `Glob`        |
+| Read a file                       | `Read`        |
 
 PyCharm has equivalents (`search_in_files_by_text` / `_by_regex`,
 `find_files_by_name_keyword` / `find_files_by_glob`, `get_file_text_by_path`,
