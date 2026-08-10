@@ -65,6 +65,13 @@ discussion, not a request for a final verdict:
   don't work around them. Never delete one without resolving it.
 
 
+# No drive-by fixes
+
+Stay inside the task's scope. When you notice an unrelated problem, dead code,
+or a refactor worth doing, surface it — don't fix it unasked. Only remove
+orphans your own change created.
+
+
 # Designing solutions
 
 For design work (not bug fixes), start by enumerating requirements with two ratings —
