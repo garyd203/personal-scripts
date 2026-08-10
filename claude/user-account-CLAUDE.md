@@ -256,6 +256,9 @@ When writing tests:
 * Use the Setup/Exercise/Verify pattern, and explicitly call out each phase using comments in the test body.
 * Use factory functions to setup dependencies that have variable configuration. Factories
   default every argument, so a test overrides only what it cares about.
+* Verify against values the test defines locally and passes in, chosen to differ from the
+  factory defaults — an assertion against a default can pass without the data ever having
+  flowed through.
 * Test names state the behavior only — keep rationale and secondary consequences out of the name;
   they belong in the test body or nowhere.
 * Real dependencies (e.g. Postgres), fakes where available (e.g. `moto`), mocks at the edges.
@@ -270,6 +273,10 @@ When writing tests:
 When testing in Python specifically:
 
 * Use pytest fixtures where appropriate to setup dependencies that are constant and well-used within the module.
+* Use pytest fixtures for infrastructure a test runs on — app, client, sessions, the
+  factory functions themselves — never for domain data. Data objects are created
+  explicitly in the test's Setup phase via a factory call, even when the defaults
+  suffice, so Setup shows every object the test depends on.
 * API-layer tests are always async.
 * Annotate fixture return types — a fixture is an interface, so its return type is a declared
   contract (yield fixtures included, e.g. `AsyncIterator[AsyncClient]`). Don't annotate test
