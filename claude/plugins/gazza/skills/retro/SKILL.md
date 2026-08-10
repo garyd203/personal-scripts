@@ -1,6 +1,7 @@
 ---
 name: retro
 description: Distil this session's corrections into durable config, conventions or memory.
+allowed-tools: Read(~/devel/gazzas-personal-scripts/claude/user-account-CLAUDE.md), Edit(~/devel/gazzas-personal-scripts/claude/user-account-CLAUDE.md)
 ---
 
 Close the "trained by feedback" loop: turn what you learned *this session* into
@@ -32,9 +33,13 @@ most enforceable option — a check beats prose.
 ## Write
 
 - Propose the change — quote the lesson, name the destination, show the diff — and
-  **ask before writing**. Don't silently mutate config.
+  **ask before writing**. Don't silently mutate config. Confirm with the
+  `AskUserQuestion` tool and write in the same turn: the `allowed-tools` grant above
+  lasts only for the invoking turn, so ending the turn to ask forfeits it.
 - Only record what's *settled*. Speculative conventions are slop; leave them out.
 - Project vs global CLAUDE.md: a lesson lands in the *project* file when it's specific to this
   repo, in the *global* `~/.claude/CLAUDE.md` when it applies everywhere. The global file
   changes every project — get explicit confirmation before touching it.
+- `~/.claude/CLAUDE.md` is a symlink — edit its target,
+  `~/devel/gazzas-personal-scripts/claude/user-account-CLAUDE.md`, directly.
 - Keep each entry minimal and self-explaining. Halve it, then check it still reads.
