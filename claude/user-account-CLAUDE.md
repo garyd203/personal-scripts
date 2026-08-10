@@ -119,6 +119,23 @@ In particular, avoid AI slop. Concretely:
 - If you can't say why a line earns its place, delete it.
 
 
+## Error handling
+
+Fail loud, fail early. An error is information — surface it, don't hide it. Raise as soon as
+you detect a bad state rather than limping on; and unless you have a specific reason to handle
+an error, let it propagate to a layer that can actually decide what to do.
+
+- Raise a specific, meaningful exception type — not a bare `Exception` — with a message that
+  says what went wrong. Prefer raising over returning a `None`/sentinel/error-code a caller
+  can silently ignore.
+- Handle an error only when you have concrete reason to expect it (the docs, the contract, or
+  having seen it) *and* a deliberate plan for it — recover, retry, translate at a boundary, or
+  knowingly ignore it as irrelevant here. The enemy is the reflexive "just in case" catch, not
+  deliberate handling.
+- Catch the narrowest exception that fits — never bare or broad.
+- When you re-raise, preserve the cause (`raise ... from err`) — never discard the traceback.
+
+
 ## Code Investigation
 
 Investigate code with the native tools and the PyCharm MCP, never the shell. Do NOT
