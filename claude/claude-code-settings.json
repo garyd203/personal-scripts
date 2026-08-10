@@ -66,13 +66,20 @@
   },
   "model": "claude-fable-5",
   "enabledPlugins": {
-    "gazza@gazzas-personal": true
+    "gazza@gazzas-personal": true,
+    "fse-tools@dataro-ai-tooling": false
   },
   "extraKnownMarketplaces": {
     "gazzas-personal": {
       "source": {
         "source": "directory",
         "path": "/Users/gazza/devel/gazzas-personal-scripts/claude"
+      }
+    },
+    "dataro-ai-tooling": {
+      "source": {
+        "source": "directory",
+        "path": "/Users/gazza/devel/ai-agent-tooling"
       }
     }
   },
