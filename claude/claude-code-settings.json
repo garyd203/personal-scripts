@@ -1,24 +1,9 @@
 {
+  "env": {
+    "CLAUDE_CODE_DISABLE_MOUSE_CLICKS": "1",
+    "DISABLE_AUTOUPDATER": "1"
+  },
   "permissions": {
-    "deny": [
-      "Bash(find *)",
-      "Bash(git commit *)",
-      "Bash(git config *)",
-      "Bash(git pull *)",
-      "Bash(git push *)",
-      "Bash(git tag *)",
-      "Bash(rg *)",
-      "Read(~/.aws/**)",
-      "Read(~/.claude/.credentials.json)",
-      "Read(~/.docker/**)",
-      "Read(~/.gnupg/**)",
-      "Read(~/.ssh/**)"
-    ],
-    "ask": [
-      "Edit(~/.claude/CLAUDE.md)",
-      "Edit(~/.claude/settings.json)",
-      "Edit(//Users/gazza/devel/gazzas-personal-scripts/**)"
-    ],
     "allow": [
       "Bash(black *)",
       "Bash(git diff *)",
@@ -58,13 +43,31 @@
       "mcp__pycharm__search_regex",
       "mcp__pycharm__search_symbol",
       "mcp__pycharm__search_text"
+    ],
+    "deny": [
+      "Bash(find *)",
+      "Bash(git commit *)",
+      "Bash(git config *)",
+      "Bash(git pull *)",
+      "Bash(git push *)",
+      "Bash(git tag *)",
+      "Bash(rg *)",
+      "Read(~/.aws/**)",
+      "Read(~/.claude/.credentials.json)",
+      "Read(~/.docker/**)",
+      "Read(~/.gnupg/**)",
+      "Read(~/.ssh/**)"
+    ],
+    "ask": [
+      "Edit(~/.claude/CLAUDE.md)",
+      "Edit(~/.claude/settings.json)",
+      "Edit(//Users/gazza/devel/gazzas-personal-scripts/**)"
     ]
   },
-  "env": {
-    "CLAUDE_CODE_DISABLE_MOUSE_CLICKS": "1",
-    "DISABLE_AUTOUPDATER": "1"
-  },
   "model": "claude-fable-5",
+  "enabledPlugins": {
+    "gazza@gazzas-personal": true
+  },
   "extraKnownMarketplaces": {
     "gazzas-personal": {
       "source": {
@@ -75,8 +78,5 @@
   },
   "effortLevel": "high",
   "autoMemoryEnabled": false,
-  "theme": "auto",
-  "enabledPlugins": {
-    "gazza@gazzas-personal": true
-  }
+  "theme": "auto"
 }
