@@ -65,7 +65,18 @@
     "DISABLE_AUTOUPDATER": "1"
   },
   "model": "claude-fable-5",
+  "extraKnownMarketplaces": {
+    "gazzas-personal": {
+      "source": {
+        "source": "directory",
+        "path": "/Users/gazza/devel/gazzas-personal-scripts/claude"
+      }
+    }
+  },
   "effortLevel": "high",
   "autoMemoryEnabled": false,
-  "theme": "auto"
+  "theme": "auto",
+  "enabledPlugins": {
+    "gazza@gazzas-personal": true
+  }
 }

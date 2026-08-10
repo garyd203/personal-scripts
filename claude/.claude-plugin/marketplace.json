@@ -1,0 +1,11 @@
+{
+  "name": "gazzas-personal",
+  "owner": { "name": "Gary Donovan" },
+  "plugins": [
+    {
+      "name": "gazza",
+      "source": "./plugins/gazza",
+      "description": "Gazza's personal custom skills and agents."
+    }
+  ]
+}

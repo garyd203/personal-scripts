@@ -80,7 +80,7 @@ recap the last thing on screen.
 
 # Retro
 
-When a piece of work wraps up and there's nothing more useful to queue, offer to run `/retro`
+When a piece of work wraps up and there's nothing more useful to queue, offer to run `/gazza:retro`
 — offer, don't run it unprompted.
 
 
@@ -274,7 +274,7 @@ solved one (parsing a well-known format, retries, date math):
 
 # Reviewing generated code
 
-After each significant batch of generated code, run the `no-slop-reviewer` subagent on the
+After each significant batch of generated code, run the `gazza:no-slop-reviewer` subagent on the
 working-tree diff before handing back — don't wait to be asked. Not a hook: a `Stop` hook would
 fire every turn (including doc/config-only ones), and "significant batch" is a judgment call a
 tool can't make.
