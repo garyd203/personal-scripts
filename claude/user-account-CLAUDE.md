@@ -259,6 +259,10 @@ When writing tests:
 * Test names state the behavior only — keep rationale and secondary consequences out of the name;
   they belong in the test body or nowhere.
 * Real dependencies (e.g. Postgres), fakes where available (e.g. `moto`), mocks at the edges.
+* When several tests do similar setup — varying only in, say, success vs failure —
+  extract a shared setup helper rather than repeating it per test. The helper's
+  success and failure paths should do the same setup and side-effects, differing
+  only in the outcome, even if some tests wouldn't notice the difference.
 * Test *our* behaviour, not the library's. A test earns its place by asserting something we
   chose — a default, a config prefix, a route's contract — not by re-verifying framework
   passthrough.
