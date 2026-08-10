@@ -188,6 +188,8 @@ over-long comments or put comment content in the wrong place. Use these guidelin
 * Be succinct. Try halving the size of your comment and see if it still makes sense.
 * Comments on a function or module (such as Python docstrings) should describe the
   _purpose_ of the function/module, not _how it's implemented_.
+* For Python public functions, add a Google-style `Args`/`Returns`/`Raises` section only
+  when the type hints don't adequately convey the behaviour of the arguments and return value.
 * Inline comments should explain _why_ — the rationale, constraint, or tradeoff that
   isn't visible in the code. Not _what_ the code does.
 * Module-level constants and type aliases get `#:` doc-comments attached to each
