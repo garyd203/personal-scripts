@@ -245,6 +245,10 @@ over-long comments or put comment content in the wrong place. Use these guidelin
   isn't visible in the code. Not _what_ the code does.
 * Module-level constants and type aliases get `#:` doc-comments attached to each
   item — never one floating block comment over a group.
+* When sibling items (fixtures, handlers, subclasses) share a behavioural contract,
+  document the contract once on the aggregate — the package or module docstring —
+  and leave per-item docstrings for deviations only. An absent docstring then reads
+  as "conventional", not "undocumented".
 * Implementation rationale never goes in a function docstring — put it as an inline
   comment on the line it justifies
 
