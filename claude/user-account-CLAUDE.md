@@ -207,6 +207,12 @@ In particular, avoid AI slop. Concretely:
 - If you can't say why a line earns its place, delete it.
 
 
+## Naming
+
+Name things using the domain's established vocabulary — the library's or field's own terms —
+rather than metaphors borrowed from another domain.
+
+
 ## Error handling
 
 Fail loud, fail early. An error is information — surface it, don't hide it. Raise as soon as
