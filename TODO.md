@@ -1,7 +1,3 @@
-# Repo config
-
-Add claude.md _for the repo_ so that Claude knows what it's looking at
-
 # Claude config
 
 - **Create a personal "CLI tool" skill** — thin, pointing at
