@@ -184,6 +184,8 @@ I often edit files myself between your tool calls, in parallel with your work. S
   immediately before writing and keep the gap between read and write small.
 * When a tool call fails because the file changed underneath you, that's me —
   re-read, and merge around my edits rather than reapplying your old version.
+* Don't rename or move files with shell `mv` — use `mcp__pycharm__rename_refactoring`,
+  which also updates references.
 
 
 # Writing code
