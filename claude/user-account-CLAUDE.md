@@ -238,6 +238,9 @@ over-long comments or put comment content in the wrong place. Use these guidelin
 * No meta-commentary: no changelog ("was X, now Y"), no notes to me ("as requested"),
   no references to the chat. Comment the code as it is, for someone who has never seen
   this conversation.
+* Don't argue with vanished history: no defending the current design against the
+  previous one, no rebutting alternatives only a reader of the old code would
+  consider. Rationale must stand alone for someone who never saw the change.
 * Be succinct. Try halving the size of your comment and see if it still makes sense.
 * Comments on a function or module (such as Python docstrings) should describe the
   _purpose_ of the function/module, not _how it's implemented_.
@@ -245,6 +248,8 @@ over-long comments or put comment content in the wrong place. Use these guidelin
   when the type hints don't adequately convey the behaviour of the arguments and return value.
 * Inline comments should explain _why_ — the rationale, constraint, or tradeoff that
   isn't visible in the code. Not _what_ the code does.
+* Comment a cross-file constraint at the place someone would edit to break it (e.g.
+  the option definition a distant consumer relies on), not at the consumer.
 * Module-level constants and type aliases get `#:` doc-comments attached to each
   item — never one floating block comment over a group.
 * When sibling items (fixtures, handlers, subclasses) share a behavioural contract,
