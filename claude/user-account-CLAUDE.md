@@ -227,6 +227,8 @@ an error, let it propagate to a layer that can actually decide what to do.
   knowingly ignore it as irrelevant here. The enemy is the reflexive "just in case" catch, not
   deliberate handling.
 - Catch the narrowest exception that fits — never bare or broad.
+- A special-case exemption to the narrow-catch rule: a deliberate best-effort step whose failure
+  must never propagate may catch a broader exception and handle it appropriately.
 - When you re-raise, preserve the cause (`raise ... from err`) — never discard the traceback.
 
 
