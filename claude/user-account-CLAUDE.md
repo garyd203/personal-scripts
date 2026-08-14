@@ -215,6 +215,12 @@ Name things using the domain's established vocabulary — the library's or field
 rather than metaphors borrowed from another domain.
 
 
+## Python style
+
+* Never `@staticmethod`: if it belongs on the class use `@classmethod`; otherwise pull it
+  out to a module function.
+
+
 ## Error handling
 
 Fail loud, fail early. An error is information — surface it, don't hide it. Raise as soon as
@@ -256,6 +262,8 @@ over-long comments or put comment content in the wrong place. Use these guidelin
   _purpose_ of the function/module, not _how it's implemented_.
 * For Python public functions, add a Google-style `Args`/`Returns`/`Raises` section only
   when the type hints don't adequately convey the behaviour of the arguments and return value.
+  Document `Raises` only for exceptions a caller might plausibly handle — never for
+  fail-loud validation.
 * Inline comments should explain _why_ — the rationale, constraint, or tradeoff that
   isn't visible in the code. Not _what_ the code does.
 * Comment a cross-file constraint at the place someone would edit to break it (e.g.
@@ -319,6 +327,8 @@ Two different things wear the word "type" in Python, and we treat them different
 That's the two masters from "What code is for" applied to types. Beyond it:
 
 * Use inference or a precise type rather than `Any` — `Any` blinds the checker.
+  For a genuinely unknown value that's required to be typed, use `object`, which forces
+  narrowing before use.
 * Don't contort code to satisfy the checker. Awkward types are often just the type system
   being awkward — a big reason we don't chase 100% typing. When a hint comes out opaque or
   dense, drop it and let inference cover it rather than writing a baroque generic.
@@ -350,6 +360,8 @@ solved one (parsing a well-known format, retries, date math):
   minor, not the major, so keep the patch component — `foo~=0.51.0` — to allow patches only.
   Deviate only with a stated reason in a comment (e.g. CalVer packages, where semver-style
   bounds are meaningless).
+* An application pins `requires-python` in `pyproject.toml` to a single minor line
+  (`==3.14.*`) — an app supports exactly one interpreter; open floors are for libraries.
 
 
 # Writing documents
