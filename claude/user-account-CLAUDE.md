@@ -332,6 +332,12 @@ That's the two masters from "What code is for" applied to types. Beyond it:
 * Don't contort code to satisfy the checker. Awkward types are often just the type system
   being awkward — a big reason we don't chase 100% typing. When a hint comes out opaque or
   dense, drop it and let inference cover it rather than writing a baroque generic.
+* When narrowing from `Any` or some other overly-broad type, default to doing this
+  transparently without any explicit type conversion. Bear in mind that `cast` is
+  an unchecked inline hint, and `assert isinstance` adds code noise and ceremony —
+  so before using one of them you need to be able to describe how it improves the
+  clarity or robustness of the codebase, and determine if there is a non-typing
+  solution that is a better fit.
 
 
 ## Use libraries, don't hand-roll
