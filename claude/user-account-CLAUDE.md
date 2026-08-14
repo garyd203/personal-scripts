@@ -384,6 +384,10 @@ solved one (parsing a well-known format, retries, date math):
   bounds are meaningless).
 * An application pins `requires-python` in `pyproject.toml` to a single minor line
   (`==3.14.*`) — an app supports exactly one interpreter; open floors are for libraries.
+* Don't adopt a package's catch-all extras bundle (`uvicorn[standard]`-style). Depend on
+  the base package and add only the extras or companion packages actually needed. When a
+  companion isn't directly imported (a library another package auto-detects), a comment
+  names who uses it.
 
 
 # Writing documents
