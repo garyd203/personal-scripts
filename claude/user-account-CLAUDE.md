@@ -269,6 +269,8 @@ over-long comments or put comment content in the wrong place. Use these guidelin
   previous one, no rebutting alternatives only a reader of the old code would
   consider. Rationale must stand alone for someone who never saw the change.
 * Be succinct. Try halving the size of your comment and see if it still makes sense.
+* Say what a thing is or does, never what it isn't — don't open a comment by negating
+  an expectation ("Not a direct import: ...").
 * Comments on a function or module (such as Python docstrings) should describe the
   _purpose_ of the function/module, not _how it's implemented_.
 * For Python public functions, add a Google-style `Args`/`Returns`/`Raises` section only
@@ -294,6 +296,9 @@ over-long comments or put comment content in the wrong place. Use these guidelin
 When writing tests:
 
 * Use the Setup/Exercise/Verify pattern, and explicitly call out each phase using comments in the test body.
+* Phase comments are bare markers (`# Setup`) by default; annotate only when the
+  phase does something non-obvious. Prefer an assert message over a Verify-comment
+  explanation.
 * Use factory functions to setup dependencies that have variable configuration. Factories
   default every argument, so a test overrides only what it cares about.
 * Verify against values the test defines locally and passes in, chosen to differ from the
