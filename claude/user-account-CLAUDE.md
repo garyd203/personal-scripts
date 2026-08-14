@@ -65,6 +65,9 @@ For design work (not bug fixes), start by enumerating requirements with two rati
 how firm, how valuable — and get my sign-off on the list before brainstorming
 solutions against it.
 
+When implementing from a spec, adopt a spec mechanism only after checking the
+codebase doesn't already have a better-fitting one.
+
 
 ## Reviewing generated code
 
