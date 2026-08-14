@@ -350,6 +350,15 @@ solved one (parsing a well-known format, retries, date math):
   bounds are meaningless).
 
 
+# Writing documents
+
+* A spec or handover for a rebuild describes the target system in its own terms —
+  don't mention or contrast with old behaviour that's been changed or dropped.
+  Pointers into the old source and data-compatibility constraints are fine.
+* Open a handover doc with a paragraph or two of product context for human readers
+  before the technical detail.
+
+
 # Terminology preferences
 
 Some of your terminology is just annoying:
