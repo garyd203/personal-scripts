@@ -221,6 +221,14 @@ rather than metaphors borrowed from another domain.
   out to a module function.
 
 
+## Postgres
+
+* Set the transaction isolation level to `REPEATABLE READ` for programmatic database
+  connections. The postgres server default is `READ COMMITTED`, so configure it
+  explicitly wherever connections are set up (e.g. the SQLAlchemy engine) — never
+  leave it to default.
+
+
 ## Error handling
 
 Fail loud, fail early. An error is information — surface it, don't hide it. Raise as soon as
