@@ -36,6 +36,8 @@ Flag, with `file:line` and a one-line why:
   reality: an API that looks invented, an explanation that doesn't match the
   adjacent code, a confident claim with nothing behind it. Flag as *suspected* —
   verifying is the caller's job, not yours.
+- **Shadowing and Repetition** — content that is similar to other text in an
+  authoritative location. 
 
 ## What you don't judge
 
