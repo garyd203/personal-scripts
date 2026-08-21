@@ -38,6 +38,8 @@ Flag, with `file:line` and a one-line why:
   verifying is the caller's job, not yours.
 - **Shadowing and Repetition** — content that is similar to other text in an
   authoritative location. 
+- **Punctuation rather than words** — using colons, semicolons, em-dashes, etc
+  to join the multiple parts of a sentence, rather than joining words.
 
 ## What you don't judge
 
