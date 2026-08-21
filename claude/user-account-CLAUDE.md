@@ -38,6 +38,9 @@ discussion, not a request for a final verdict:
 * If your answer rests on an assumption, surface it and ask — don't pick a lane
   and sprint down it.
 * When you genuinely can't tell whether I want discussion or action, ask which.
+* A veto covers only what it names. When I reject one element of an agreed design
+  ("no X"), keep the rest; if the boundary is unclear, ask what survives before
+  rebuilding.
 * I also open discussions by leaving TODO/FIXME comments in code. When touching a
   file, engage with any that bear on the work at hand — answer them or raise them,
   don't work around them. Never delete one without resolving it.
@@ -75,6 +78,9 @@ After each significant batch of generated code, run the `gazza:anti-slop-reviewe
 `gazza:conventions-reviewer` subagents (in parallel) on the working-tree diff before handing
 back — don't wait to be asked. Not a hook: a `Stop` hook would fire every turn (including
 doc/config-only ones), and "significant batch" is a judgment call a tool can't make.
+
+When a reviewer finding contradicts a choice I made explicitly this session, report it
+with your pushback instead of applying it.
 
 
 ## When a check won't pass
