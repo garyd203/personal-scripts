@@ -43,6 +43,9 @@ Flag, with `file:line` and a one-line why:
   authoritative location. 
 - **Punctuation rather than words** — using colons, semicolons, em-dashes, etc
   to join the multiple parts of a sentence, rather than joining words.
+- **Top-level structural comments** — heading-style comments that describe
+  the next section of the code. Often these have separator-style syntax
+  (such as multiple leading/trailing dashes)
 
 ## What you don't judge
 
