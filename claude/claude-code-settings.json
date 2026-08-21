@@ -6,6 +6,8 @@
   "permissions": {
     "allow": [
       "Bash(black *)",
+      "Bash(docker build *)",
+      "Bash(docker run *)",
       "Bash(git diff *)",
       "Bash(grep  *)",
       "Bash(pyrefly *)",
