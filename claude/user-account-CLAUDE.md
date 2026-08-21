@@ -76,7 +76,8 @@ codebase doesn't already have a better-fitting one.
 
 After each significant batch of generated code, run the `gazza:anti-slop-reviewer` and
 `gazza:conventions-reviewer` subagents (in parallel) on the working-tree diff before handing
-back — don't wait to be asked. Not a hook: a `Stop` hook would fire every turn (including
+back — don't wait to be asked. When the batch includes Python, add `gazza:python-reviewer`
+to the same parallel run. Not a hook: a `Stop` hook would fire every turn (including
 doc/config-only ones), and "significant batch" is a judgment call a tool can't make.
 
 When a reviewer finding contradicts a choice I made explicitly this session, report it

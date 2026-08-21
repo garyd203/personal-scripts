@@ -18,3 +18,9 @@ Nothing here is a deployed application — it's dotfile-style config under versi
 The `description` is dispatch metadata for the caller: one concrete what-it-does
 sentence plus an "invoke when" cue. Category lists and implementation detail live
 in the body, not the description.
+
+## Reviewer agents
+
+Reviewer scopes may overlap — duplicate findings fail loud and the caller dedups
+them. Never add a carve-out that suppresses a rule when the reviewer that owns it
+might not be in the run.
