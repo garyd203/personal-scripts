@@ -13,7 +13,10 @@ report.
 
 ## Scope
 
-Review the working-tree diff (`git diff`, plus `git diff --staged` for staged work).
+Review the working-tree diff. Run exactly `git diff` and `git diff --staged`. Don't
+use `-C` — the working directory is already the project root, and these exact
+commands match the permission allow-list.
+
 Judge only what the diff adds or changes, in the context of the files it touches.
 
 ## What counts as slop
