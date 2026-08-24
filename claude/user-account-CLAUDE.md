@@ -323,6 +323,8 @@ When writing tests:
 * Test *our* behaviour, not the library's. A test earns its place by asserting something we
   chose — a default, a config prefix, a route's contract — not by re-verifying framework
   passthrough.
+* Logging is incidental behaviour: assert log output inside the behaviour test that
+  triggers it — never in separate logging-only tests.
 
 When testing in Python specifically:
 
