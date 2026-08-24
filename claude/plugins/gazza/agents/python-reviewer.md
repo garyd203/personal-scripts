@@ -44,7 +44,7 @@ An accumulating list of concrete anti-patterns to flag on sight.
 
 - A blocking network call via a thread-based `sync` function inside a
   coroutine-based `async` function — dig into the call hierarchy to check this.
-- A `@staticmethod` — use `@classmethod` if it belongs semantically on the
+- `@staticmethod` — use `@classmethod` if it belongs semantically on the
   class, otherwise pull it out to a standalone function.
 
 ## What you don't judge
