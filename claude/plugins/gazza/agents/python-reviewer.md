@@ -23,20 +23,10 @@ the context of the files it touches. Other languages are out of scope.
 
 Flag, with `file:line` and a one-line why:
 
-- **Needless complexity** — a clever mechanism where a boring one works: layers of
-  indirection with one caller, a class where a function suffices, configurability
-  nothing configures.
-- **Wrong altitude** — logic at the wrong level: business rules buried in a helper,
-  I/O tangled through pure computation, a function doing three jobs.
 - **Non-idiomatic Python** — reinventing the stdlib or an installed library; manual
   index loops where `enumerate`/`zip`/a comprehension fits.
-- **Structural smells** — god functions, deep nesting where an early return
-  flattens it, boolean flag parameters that fork behaviour, parallel data
-  structures that should be one.
 - **Wrong tool for the job** — a list scanned for membership where a set belongs,
   dicts of tuples standing in for a dataclass, regex where `str` methods do.
-- **Language-level bugs** — misuse of the language or a library that is wrong
-  regardless of the business logic.
 
 ## Specific patterns
 
@@ -46,6 +36,10 @@ An accumulating list of concrete anti-patterns to flag on sight.
   coroutine-based `async` function — dig into the call hierarchy to check this.
 - `@staticmethod` — use `@classmethod` if it belongs semantically on the
   class, otherwise pull it out to a standalone function.
+- Deep nesting where an early return could flatten it
+- Boolean or Enum flag parameters that fork behaviour
+- Parallel data structures that should be one.
+
 
 ## What you don't judge
 
