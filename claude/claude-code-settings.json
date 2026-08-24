@@ -48,6 +48,7 @@
     ],
     "deny": [
       "Bash(find *)",
+      "Bash(git -C *)",
       "Bash(git commit *)",
       "Bash(git config *)",
       "Bash(git pull *)",
