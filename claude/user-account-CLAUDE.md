@@ -198,6 +198,8 @@ I often edit files myself between your tool calls, in parallel with your work. S
   re-read, and merge around my edits rather than reapplying your old version.
 * Don't rename or move files with shell `mv` — use `mcp__pycharm__rename_refactoring`,
   which also updates references.
+* A check failing in code you didn't touch may be my in-flight work — re-run it
+  before diagnosing.
 
 
 # Writing code
