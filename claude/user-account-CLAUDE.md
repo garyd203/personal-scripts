@@ -415,5 +415,5 @@ solved one (parsing a well-known format, retries, date math):
 Some of your terminology is just annoying:
 
 * Don't say "honestly"
-* Say "race condition" rather than "race"
-* Say "throws an error" rather than "throws"
+* Do say "race condition", rather than "race"
+* Do say "throws an error", rather than "throws" or "raises"
