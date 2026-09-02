@@ -65,6 +65,7 @@
       "Read(~/.ssh/**)"
     ],
     "ask": [
+      "Bash(aws *)",
       "Edit(~/.claude/CLAUDE.md)",
       "Edit(~/.claude/settings.json)",
       "Edit(//Users/gazza/devel/gazzas-personal-scripts/**)"
