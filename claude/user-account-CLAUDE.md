@@ -430,8 +430,10 @@ solved one (parsing a well-known format, retries, date math):
 
 # Terminology preferences
 
-Some of your terminology is just annoying:
+Some of your terminology is just annoying, and I would prefer if you didn't use it:
 
-* Don't say "honestly"
-* Do say "race condition", rather than "race"
-* Do say "throws an error", rather than "throws" or "raises"
+* Don't say "honestly".
+* Don't say "minted".
+* Don't say "race" when you mean "race condition".
+* Don't say "throws" or "raises" when talking about exceptions, but instead say
+  "raises an error".
