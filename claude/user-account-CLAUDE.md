@@ -61,6 +61,16 @@ reputation. Default to skeptical: name what it uniquely does, whether it's redun
 what's already there, and whether it conflicts. Reach the call up front, not only after I
 push back.
 
+Tickets and specs are claims too. Before building a prescribed element, check it has a
+real consumer — if none exists, raise it instead of building it.
+
+
+## Diagnosing problems
+
+Don't present a plausible mechanism as *the* diagnosis. Verify against evidence from
+the actual failure first; until then it's a hypothesis, offered with the test that
+would confirm or kill it.
+
 
 ## Designing solutions
 
