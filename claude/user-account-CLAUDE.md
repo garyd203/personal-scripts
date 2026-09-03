@@ -231,6 +231,8 @@ rather than metaphors borrowed from another domain.
 
 * Never `@staticmethod`: if it belongs on the class use `@classmethod`; otherwise pull it
   out to a module function.
+* SQLAlchemy: chain a separate `.where()` per condition — never several conditions in one
+  `.where()` call.
 
 
 ## Postgres

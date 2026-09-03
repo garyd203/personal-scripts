@@ -1,4 +1,4 @@
-# Claude config
+# New skills & agents
 
 - **Create a personal "CLI tool" skill** — thin, pointing at
   [clig.dev](https://clig.dev) (Command Line Interface Guidelines) for the
@@ -15,3 +15,10 @@
   to write, and the bar is usually low. Bonus is that it could run on an
   existing codebase. The hard part will be ensuring that it gives actionable
   output
+
+
+# CLAUDE.md tidying
+
+- Fully migrate all concrete coding advice into a review agent. It doesn't make
+  sense to say it twice. OIur mindset should be that the agent should get it
+  right on it's own, and if it doesnt then the reviewer should correct it.
