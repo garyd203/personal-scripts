@@ -177,6 +177,9 @@ A plain text search for a symbol name will miss overrides, imports and dynamic
 references, and drown you in comment/string false positives. Prefer symbol search
 whenever the target is a function, class, method or variable.
 
+Always pass `projectPath` (the working directory) on PyCharm MCP calls — several
+projects are usually open, so calls without it fail.
+
 **2. Plain text / filename / file reads — use the native tools.** For a literal
 string, a regex sweep, a filename pattern, or reading a file, the native `Grep`,
 `Glob` and `Read` tools are the default: always available, prompt-free and fast.
