@@ -39,6 +39,8 @@ An accumulating list of concrete anti-patterns to flag on sight.
 - Deep nesting where an early return could flatten it
 - Boolean or Enum flag parameters that fork behaviour
 - Parallel data structures that should be one.
+- Using `super().__init__()` — only for `__init__`, calls to the superclass
+  should be explicitly anchored to the relevant class name(s).
 
 
 ## What you don't judge
