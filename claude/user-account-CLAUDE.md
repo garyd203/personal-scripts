@@ -335,6 +335,9 @@ When writing tests:
   extract a shared setup helper rather than repeating it per test. The helper's
   success and failure paths should do the same setup and side-effects, differing
   only in the outcome, even if some tests wouldn't notice the difference.
+* Well-known test plumbing (e.g. an authenticated client tied to a known user) is
+  infrastructure: build the shared fixture up front — don't wait for duplication to
+  justify it.
 * Test *our* behaviour, not the library's. A test earns its place by asserting something we
   chose — a default, a config prefix, a route's contract — not by re-verifying framework
   passthrough.
