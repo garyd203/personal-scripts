@@ -9,6 +9,7 @@
       "Bash(docker build *)",
       "Bash(docker run *)",
       "Bash(git diff *)",
+      "Bash(git log *)",
       "Bash(grep  *)",
       "Bash(pyrefly *)",
       "Bash(pytest *)",
