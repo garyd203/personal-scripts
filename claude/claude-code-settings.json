@@ -5,6 +5,7 @@
   },
   "permissions": {
     "allow": [
+      "Bash(actionlint *)",
       "Bash(black *)",
       "Bash(docker build *)",
       "Bash(docker run *)",
@@ -16,6 +17,7 @@
       "Bash(ruff check *)",
       "Bash(tail *)",
       "Bash(uv sync *)",
+      "Bash(yamllint *)",
       "Edit(//Users/gazza/devel/**)",
       "mcp__claude_ai_Sentry__find_organizations",
       "mcp__claude_ai_Sentry__find_projects",
