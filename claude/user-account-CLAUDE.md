@@ -430,7 +430,7 @@ solved one (parsing a well-known format, retries, date math):
 
 # Terminology preferences
 
-Some of your terminology is just annoying, and I would prefer if you didn't use it:
+Some of your terminology is just annoying, and you shouldn't use it:
 
 * Don't say "honestly".
 * Don't say "minted".
