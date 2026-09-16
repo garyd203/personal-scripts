@@ -171,6 +171,26 @@ Direct commands are shorter, match my permission allow-list, and run in
 the same venv I'm using, so we both see identical behaviour.
 
 
+## Claude Code hooks
+
+Wrap hook commands with the `hokum` package (PyPI) — it maps wrapped-command
+failures to exit 2, the only code Claude Code doesn't ignore. Usage docs are
+in `uvx hokum --help`, not the README.
+
+
+## Org Notion pages
+
+The Notion pages named in the organization instructions aren't readable via
+WebFetch (auth wall) — read them with the Notion MCP when it's connected;
+otherwise skip them and note the skip once.
+
+
+## Never pre-commit
+
+Never set up or propose the `pre-commit` framework — not as git hooks, not as
+a CI runner.
+
+
 ## Code Investigation
 
 Investigate code with the native tools and the PyCharm MCP, never the shell. Do NOT
