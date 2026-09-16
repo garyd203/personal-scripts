@@ -253,6 +253,9 @@ I often edit files myself between your tool calls, in parallel with your work. S
   which also updates references.
 * A check failing in code you didn't touch may be my in-flight work — re-run it
   before diagnosing.
+* Never reason from a stale read — if I may have edited a file since you last read
+  it (an "opened in IDE" notice is a strong hint), re-read before making claims
+  about its contents.
 
 
 # Writing code
