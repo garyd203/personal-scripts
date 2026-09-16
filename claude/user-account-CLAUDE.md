@@ -145,6 +145,17 @@ prompts. So:
 * Prefer separate single-purpose commands over `&&`-chains and pipes — every
   segment of a compound command must independently match the allow-list, so
   compounds multiply prompt risk.
+* `gh` isn't on the allow-list — for public GitHub data (releases, tag SHAs,
+  file contents), use WebFetch against `api.github.com` or
+  `raw.githubusercontent.com` instead.
+
+
+## No scratch files in the project tree
+
+Don't create throwaway test files inside the project — `rm` isn't in the
+allow-list, so you can't clean them up and I have to. Use the scratchpad
+directory; if a test genuinely needs a file in the project tree, say so
+before creating it.
 
 
 ## Python commands: run directly, not via `uv run` or `poetry run`
