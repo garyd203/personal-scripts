@@ -41,6 +41,9 @@ An accumulating list of concrete anti-patterns to flag on sight.
 - Parallel data structures that should be one.
 - Using `super().__init__()` — only for `__init__`, calls to the superclass
   should be explicitly anchored to the relevant class name(s).
+- Fancy use of `match` statements. A useful `match` should be easier to follow
+  than the equivalent `if`.
+- Function documentation that describes the caller.
 
 
 ## What you don't judge
