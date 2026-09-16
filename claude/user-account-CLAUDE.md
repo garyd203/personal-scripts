@@ -64,6 +64,15 @@ push back.
 Tickets and specs are claims too. Before building a prescribed element, check it has a
 real consumer — if none exists, raise it instead of building it.
 
+When comparing designs, a rule enforced by structure (a trigger, a type, a boundary
+that makes the bad state impossible) beats the same rule enforced by a condition
+someone must keep correct.
+
+A prose rule stated more broadly than the tool config that enforces it is
+usually deliberate layering — policy categories vs the concrete subset adopted
+so far — not drift. Flag a contradiction only when the config permits something
+the prose forbids.
+
 
 ## Diagnosing problems
 
