@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "uvx hokum==0.5 --field tool_input.file_path --only '*.py' -- ruff check"
+          }
+        ]
+      }
+    ]
+  }
+}
