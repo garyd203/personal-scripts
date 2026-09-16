@@ -282,6 +282,9 @@ In particular, avoid AI slop. Concretely:
 Name things using the domain's established vocabulary — the library's or field's own terms —
 rather than metaphors borrowed from another domain.
 
+Name a value for its content, not its mechanics — even short-lived locals: a file
+handle for `pyproject.toml` is `pyproject`, not `fh`.
+
 
 ## Python style
 
