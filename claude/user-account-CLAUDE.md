@@ -472,6 +472,8 @@ solved one (parsing a well-known format, retries, date math):
   Pointers into the old source and data-compatibility constraints are fine.
 * Open a handover doc with a paragraph or two of product context for human readers
   before the technical detail.
+* In bold-label bullet lists, separate the label from its description with a
+  colon, not an em-dash.
 
 
 # Terminology preferences
