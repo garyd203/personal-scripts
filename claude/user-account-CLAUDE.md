@@ -500,3 +500,6 @@ Some of your terminology is just annoying, and you shouldn't use it:
 * Don't say "race" when you mean "race condition".
 * Don't say "throws" or "raises" when talking about exceptions, but instead say
   "raises an error".
+
+Never join clauses with an em-dash. Use a conjunction, comma, colon, semicolon,
+or separate sentences. (En-dashes in numeric ranges are fine.)
