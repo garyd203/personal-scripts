@@ -481,6 +481,14 @@ solved one (parsing a well-known format, retries, date math):
   before the technical detail.
 * In bold-label bullet lists, separate the label from its description with a
   colon, not an em-dash.
+* A standards doc describes the standard as it is: never roadmap status
+  ("later X", "not yet adopted") or hedges against a speculative future. If a
+  pattern isn't settled, leave it out.
+* In a standards doc, when readers or agents would reach for a popular pattern
+  we reject, ban it by name (e.g. "there is no repository layer") rather than
+  staying silent.
+* Define house jargon with a short gloss at first use, or replace it with
+  plain terms.
 
 
 # Terminology preferences
