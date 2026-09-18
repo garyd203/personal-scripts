@@ -90,6 +90,9 @@ solutions against it.
 When implementing from a spec, adopt a spec mechanism only after checking the
 codebase doesn't already have a better-fitting one.
 
+Never design automation that pushes directly to `main` or another protected
+branch — changes land via PRs.
+
 
 ## Reviewing generated code
 
@@ -319,6 +322,10 @@ an error, let it propagate to a layer that can actually decide what to do.
 - A special-case exemption to the narrow-catch rule: a deliberate best-effort step whose failure
   must never propagate may catch a broader exception and handle it appropriately.
 - When you re-raise, preserve the cause (`raise ... from err`) — never discard the traceback.
+- A CLI script raises a specific exception from its logic and translates it once at the
+  `__main__` boundary (`sys.exit(str(err))`) — no `sys.exit` calls buried in functions.
+- In short scripts and inline steps, simple input validation may be a one-line `assert`
+  with a message.
 
 
 ## Code comments
